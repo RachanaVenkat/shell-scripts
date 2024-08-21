@@ -28,7 +28,7 @@ required_restarts(){
     echo "Enabling and starting services..."
     sudo systemctl enable --now docker || { echo "Failed to start Docker."; exit 1; }
     sudo systemctl enable --now nginx || { echo "Failed to start Nginx."; exit 1; }
-    sudo systemctl restart docker
+    #sudo systemctl restart docker
 }
 
 deploy(){
